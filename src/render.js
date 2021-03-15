@@ -2,10 +2,8 @@
 const { desktopCapturer, remote } = require("electron");
 const { Menu } = remote;
 
-console.log(console);
-
-const {dialog} = remote;
-const {writeFile} = require("fs");
+const { dialog } = remote;
+const { writeFile } = require("fs");
 
 // Global variables
 let mediaRecorder;
