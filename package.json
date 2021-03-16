@@ -45,7 +45,8 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "require": "^2.4.20"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
@@ -53,6 +54,6 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
-    "electron": "12.0.1"
+    "electron": "^12.0.1"
   }
 }
