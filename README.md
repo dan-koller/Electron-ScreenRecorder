@@ -14,7 +14,7 @@ I got the inspiration from Jeff Delaney @ fireship.io. I created my own version 
   
 - `npx create-electron-app app-name`
   
-## What you need to do:
+## What you need to do upfront:
   
 Change the webPreferences in your `index.js` to make your app run in electron v9 and newer:
   
@@ -29,7 +29,7 @@ Change the webPreferences in your `index.js` to make your app run in electron v9
           enableRemoteModule: true,
 
   
-## Get started
+## Get started:
   
 - Add a `render.js` to your project (this is where you put your "frontend" code)
 - Add the `render.js` to the script tag of your index.html (put a "`defer`" variable into script-tag)
