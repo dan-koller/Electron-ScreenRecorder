@@ -17,7 +17,7 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
 
 ## What you need to do upfront:
 
-Change the webPreferences in your `index.js` to make your app run in electron v9 and newer:
+Change the webPreferences in your `index.js` to make your app run in Electron v9 and newer:
 
 #### For example:
 
