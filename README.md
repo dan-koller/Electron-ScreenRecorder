@@ -29,7 +29,7 @@ Change the webPreferences in your `index.js` to make your app run in Electron v9
           contextIsolation: false,
           enableRemoteModule: true,
 
-Especially `enableRemoteModule` is required in Electron v9 in order to work properly with Node as you can see [here](https://github.com/electron/electron/issues/21408).
+Especially `enableRemoteModule: true` is required in Electron v9 in order to work properly with Node as you can see [here](https://github.com/electron/electron/issues/21408).
 
 ## Get started:
 
