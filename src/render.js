@@ -1,9 +1,9 @@
 // Import modules (from browser)
 const { desktopCapturer, remote } = require("electron");
-const { Menu } = remote;
 
-const { dialog } = remote;
 const { writeFile } = require("fs");
+const { dialog } = remote;
+const { Menu } = remote;
 
 // Global variables
 let mediaRecorder;
@@ -13,9 +13,9 @@ const recordedFrames = [];
 const inputElement = document.querySelector("input");
 const  startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
-const inputSelectBtn = document.getElementById("inputSelectBtn");
 
-// Event handler
+// Select video input
+const inputSelectBtn = document.getElementById("inputSelectBtn");
 inputSelectBtn.onclick = getInputSources;
 
 // List available input sources
