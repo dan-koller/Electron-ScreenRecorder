@@ -10,7 +10,7 @@ let mediaRecorder;
 const recordedFrames = [];
 
 // Define buttons
-const videoElement = document.querySelector("input");
+const inputElement = document.querySelector("input");
 const  startBtn = document.getElementById("startBtn");
 const stopBtn = document.getElementById("stopBtn");
 const inputSelectBtn = document.getElementById("inputSelectBtn");
@@ -55,8 +55,8 @@ async function selectSource(source) {
     const stream = await navigator.mediaDevices.getUserMedia(restrictions);
 
     // Preview source in an element
-    videoElement.srcObject = stream;
-    videoElement.play();
+    inputElement.srcObject = stream;
+    inputElement.play();
 
     // Capture footage
     const options = {mimeType: "video/webm; codecs=vp9"};
