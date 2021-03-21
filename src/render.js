@@ -1,6 +1,5 @@
 // Import modules (from browser)
 const { desktopCapturer, remote } = require("electron");
-
 const { writeFile } = require("fs");
 const { dialog } = remote;
 const { Menu } = remote;
@@ -11,8 +10,18 @@ const recordedFrames = [];
 
 // Define buttons
 const inputElement = document.querySelector("input");
-const  startBtn = document.getElementById("startBtn");
+
+const startBtn = document.getElementById("startBtn");
+startBtn.onclick = a => {
+    mediaRecorder?.start();
+    startBtn.innerText = "Starting video recording";
+};
+
 const stopBtn = document.getElementById("stopBtn");
+stopBtn.onclick = a => {
+    mediaRecorder?.stop();
+    stopBtn.innerText = "Stopping video recording";
+};
 
 // Select video input
 const inputSelectBtn = document.getElementById("inputSelectBtn");
@@ -82,7 +91,7 @@ async function handleStop(a) {
 
     const buffer = Buffer.from(await blob.arrayBuffer());
 
-    const {filepath} = await dialog.showSaveDialog({
+    const { filepath } = await dialog.showSaveDialog({
 
         buttonLabel: "Save video",
         defaultPath: `vid-${Date.now()}.webm`
