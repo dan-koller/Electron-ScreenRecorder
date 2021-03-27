@@ -36,8 +36,8 @@ Especially `enableRemoteModule: true` is required in Electron v9 in order to wor
 
 - Add a `render.js` to your project (this is where you put your "frontend" code)
 - Import `require` module with `require('@electron/remote/main').initialize()` to your main process (`index.js`)
-- Add `const { BrowserWindow } = require('@electron/remote')` to the render process to use `require` dependencies
-  (See [Electron/require Documentation](https://github.com/electron/remote) for further information)
+- Add `const { BrowserWindow } = require('@electron/remote')` to the render process to use `require` dependencies  
+  _(See [Electron/require Documentation](https://github.com/electron/remote) for further information)_
 
 - Add the `render.js` to the script tag of your index.html (put a "`defer`" variable into script-tag)
 - To start your app run "`npm start`" in your terminal
