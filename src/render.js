@@ -11,16 +11,16 @@ let mediaRecorder;
 const recordedFrames = [];
 
 // Define buttons
-const inputElement = document.querySelector("input");
+const inputElement = document.querySelector("video");
 
 const startBtn = document.getElementById("startBtn");
-startBtn.onclick = a => {
+startBtn.onclick = e => {
     mediaRecorder?.start();
     startBtn.innerText = "Starting video recording";
 };
 
 const stopBtn = document.getElementById("stopBtn");
-stopBtn.onclick = a => {
+stopBtn.onclick = e => {
     mediaRecorder?.stop();
     stopBtn.innerText = "Stopping video recording";
 };
@@ -80,13 +80,13 @@ async function selectSource(source) {
 }
 
 // Capture all recorded frames
-function handleDataAvailable(a) {
+function handleDataAvailable(e) {
     console.log("video data available");
-    recordedFrames.push(a.data);
+    recordedFrames.push(e.data);
 }
 
 // Save output file on stop
-async function handleStop(a) {
+async function handleStop(e) {
     const blob = new Blob(recordedFrames, {
         type: "video/webm; codecs=vp9"
     });
