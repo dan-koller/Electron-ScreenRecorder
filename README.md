@@ -8,6 +8,7 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
 
 - **NodeJS** (check with "node -v" )
 - **npm** (check with "npm -v")
+- **@electron/require** (install with `npm install --save @electron/remote`)
 - **Bulma CSS** (See [Bulma documentation](https://bulma.io/documentation/overview/start/))  
   _(Bulma is optional. You can use a different CSS framework or do it yourself)_
 
@@ -34,6 +35,10 @@ Especially `enableRemoteModule: true` is required in Electron v9 in order to wor
 ## Get started:
 
 - Add a `render.js` to your project (this is where you put your "frontend" code)
+- Import `require` module with `require('@electron/remote/main').initialize()` to your main process (`index.js`)
+- Add `const { BrowserWindow } = require('@electron/remote')` to the render process to use `require` dependencies
+  (See [Electron/require Documentation](https://github.com/electron/remote) for further information)
+
 - Add the `render.js` to the script tag of your index.html (put a "`defer`" variable into script-tag)
 - To start your app run "`npm start`" in your terminal
 - If you want to reload, simply type "`rs`" to relaunch your app
