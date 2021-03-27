@@ -1,3 +1,4 @@
+require('@electron/remote/main').initialize();
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
