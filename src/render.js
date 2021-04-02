@@ -1,4 +1,4 @@
-// Import modules (from browser)
+// Import modules
 const { BrowserWindow } = require('@electron/remote')
 
 const { desktopCapturer, remote } = require("electron");
