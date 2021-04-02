@@ -42,3 +42,5 @@ Especially `enableRemoteModule: true` is required in Electron v9 in order to wor
 - Add the `render.js` to the script tag of your index.html (put a "`defer`" variable into script-tag)
 - To start your app run "`npm start`" in your terminal
 - If you want to reload, simply type "`rs`" to relaunch your app
+
+- Create your app with `npm run make`
