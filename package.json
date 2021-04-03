@@ -16,7 +16,7 @@
     "name": "Dan Koller",
     "email": "57103678+dankoller112@users.noreply.github.com"
   },
-  "license": "CC-BY-SA-3.0",
+  "license": "MIT",
   "config": {
     "forge": {
       "packagerConfig": {},
