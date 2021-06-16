@@ -14,7 +14,8 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
 
 ## Initialize your app:
 
-- `npx create-electron-app app-name`
+- Install dependencies (`npm i`)
+- Atfer that, run `npx create-electron-app app-name`
 
 ## What you need to do upfront:
 
