@@ -37,6 +37,8 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
           nodeIntegration: true,
           contextIsolation: false,
           enableRemoteModule: true,
+        }
+      });
 
 _Especially `enableRemoteModule: true` is required in Electron v9 in order to work properly with Node as you can see [here](https://github.com/electron/electron/issues/21408)._
 
