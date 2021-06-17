@@ -15,11 +15,18 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
 ## Initialize your app:
 
 - Install dependencies (`npm i`)
-- Atfer that, run `npx create-electron-app app-name`
 
-## What you need to do upfront:
+## Get started:
 
-Change the webPreferences in your `index.js` to make your app run in Electron v9 and newer:
+- To start your app run "`npm start`" in your terminal
+- If you want to reload, simply type "`rs`" to relaunch your app
+- Create your app with `npm run make`
+
+## Things to mention (if you create your own version):
+
+- Create project by running `npx create-electron-app app-name`
+- Add a `render.js` to your project (this is where you put your "frontend" code)
+- Change the webPreferences in your `index.js` to make your app run in Electron v9 and newer:
 
 #### For example:
 
@@ -31,17 +38,10 @@ Change the webPreferences in your `index.js` to make your app run in Electron v9
           contextIsolation: false,
           enableRemoteModule: true,
 
-Especially `enableRemoteModule: true` is required in Electron v9 in order to work properly with Node as you can see [here](https://github.com/electron/electron/issues/21408).
+_Especially `enableRemoteModule: true` is required in Electron v9 in order to work properly with Node as you can see [here](https://github.com/electron/electron/issues/21408)._
 
-## Get started:
-
-- Add a `render.js` to your project (this is where you put your "frontend" code)
 - Import `require` module with `require('@electron/remote/main').initialize()` to your main process (`index.js`)
 - Add `const { BrowserWindow } = require('@electron/remote')` to the render process to use `require` dependencies  
   _(See [Electron/require Documentation](https://github.com/electron/remote) for further information)_
-
+  
 - Add the `render.js` to the script tag of your index.html (put a "`defer`" variable into script-tag)
-- To start your app run "`npm start`" in your terminal
-- If you want to reload, simply type "`rs`" to relaunch your app
-
-- Create your app with `npm run make`
