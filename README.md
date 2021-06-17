@@ -6,8 +6,8 @@ I took the inspiration from Jeff Delaney @ fireship.io. I created my own version
 
 ## What you'll need:
 
-- **NodeJS** (check with "node -v" )
-- **npm** (check with "npm -v")
+- **NodeJS** (check with `node -v` )
+- **npm** (check with `npm -v`)
 - **@electron/require** (install with `npm install --save @electron/remote`)
 - **Bulma CSS** (See [Bulma documentation](https://bulma.io/documentation/overview/start/))  
   _(Bulma is optional. You can use a different CSS framework or do it yourself)_
